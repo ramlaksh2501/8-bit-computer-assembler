@@ -48,7 +48,7 @@ int main(int argv,char **argc){
 	printf("%d\n",HEX);
 	int fd_hex;
 	if(HEX!=-1){
-	fd_hex=open(argc[HEX],O_WRONLY|O_TRUNC|O_CREAT|O_RDONLY,S_IRWXG|S_IRWXU|S_IRWXO);
+	fd_hex=open(argc[HEX],O_TRUNC|O_CREAT|O_RDONLY,S_IRWXG|S_IRWXU|S_IRWXO);
 	}
 	else{
 	fd_hex=open(bin,O_WRONLY|O_TRUNC|O_CREAT);
